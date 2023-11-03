@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-zs08)m(=f$8im57(*_pzn(8=8$)w+nft*b6^$0n^ibe26ey9((
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app', 'api.mckerlie.com']
 
 
 # Application definition
@@ -69,7 +69,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'api-mckerlie-com.wsgi.application'
+WSGI_APPLICATION = 'api-mckerlie-com.wsgi.app'
 
 
 # Database
