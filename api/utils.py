@@ -40,4 +40,4 @@ def ask_question(question):
     return result
 
 def split_answer(answer):
-    return answer.split("\n").strip()[0]
+    return answer.strip().split("\n")[0]
