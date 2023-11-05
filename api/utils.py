@@ -22,17 +22,18 @@ def ask_question(question):
     documents = load_markdown_docs()
     pdfs = load_pdf_docs()
 
+    '''
     text_splitter = RecursiveCharacterTextSplitter(
         chunk_size = 1500,
         chunk_overlap = 150
     )
     splits = text_splitter.split_documents(documents+pdfs)
-
-    search_index = FAISS.from_documents(splits, OpenAIEmbeddings())
+    '''
+    search_index = FAISS.from_documents(documents+pdfs, OpenAIEmbeddings())
 
     result = chain(
         {
-            "input_documents": search_index.similarity_search(question, k=5),
+            "input_documents": search_index.similarity_search(question, k=2),
             "question": question,
         },
         return_only_outputs=True,
