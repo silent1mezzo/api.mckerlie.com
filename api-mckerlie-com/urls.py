@@ -16,9 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from api.views import ask
+from api.views import AskView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('ask/', ask),
+    path('ask/', AskView.as_view()),
 ]
